@@ -208,7 +208,3 @@ This project is developed for academic research in:
 Secure Data Storage on Web3 using Blockchain Technology
 
 It demonstrates decentralized storage principles and ownership management using smart contracts.
-
-📜 License
-
-MIT License
