@@ -28,7 +28,7 @@ export const readFile = async (privateKey, fileHash, contractAddress) => {
 
     console.log("CID:", CID);
 
-    // 🔥 Mở file qua IPFS Desktop local gateway
+    //IPFS Desktop local gateway
     const ipfsURL = `http://${net.host}:8080/ipfs/${CID}`;
     window.open(ipfsURL, "_blank");
 
