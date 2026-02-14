@@ -1,10 +1,10 @@
-Web3 File Storage System (IPFS + Ethereum)
+# Web3 File Storage System (IPFS + Ethereum)
 
 A decentralized file sharing system built with IPFS and Ethereum Smart Contracts.
 
 This project demonstrates how blockchain can be used to manage file ownership while IPFS handles decentralized storage.
 
-🚀 Overview
+# 🚀 Overview
 
 Traditional file systems rely on centralized servers.
 
@@ -24,7 +24,7 @@ This application:
 
 - Supports multi-node IPFS demonstration in LAN environment
 
-🏗 Architecture
+# 🏗 Architecture
 
 User → React Frontend → IPFS → Smart Contract → Hardhat Network
 
@@ -40,7 +40,7 @@ Components
 
 - Gateway Access: http://IP:8080/ipfs/CID
 
-🔐 How It Works
+# 🔐 How It Works
 
 1. User logs in using private key
 
@@ -58,7 +58,7 @@ Components
 
 Ownership is managed by the smart contract.
 
-📦 Installation
+# 📦 Installation
 
 1️⃣ Clone repository
 
@@ -122,7 +122,7 @@ If using CRA:
 HOST=0.0.0.0 npm start
 ``
 
-🌐 Accessing from Another Machine
+# 🌐 Accessing from Another Machine
 
 Ensure Hardhat runs on 0.0.0.0
 
@@ -142,7 +142,7 @@ Access via:
 
 - http://SERVER_IP:3000
 
-🧪 Demo: Multi-Node IPFS
+# 🧪 Demo: Multi-Node IPFS
 
 Machine A uploads file
 
@@ -155,7 +155,7 @@ ipfs cat <CID>
 
 This demonstrates distributed storage.
 
-📂 Project Structure
+# 📂 Project Structure
 /contracts
   FileUploadSystem.sol
 
@@ -169,7 +169,7 @@ This demonstrates distributed storage.
     read.js
     delete.js
 
-🛠 Smart Contract Features
+# 🛠 Smart Contract Features
 
 Upload file metadata
 
@@ -179,7 +179,7 @@ Delete file reference
 
 Ownership-based access
 
-⚠ Notes
+# ⚠ Notes
 
 IPFS does not support deletion of content globally
 
@@ -189,7 +189,7 @@ This project runs on local Hardhat network
 
 Designed for research and demonstration purposes
 
-📈 Future Improvements
+# 📈 Future Improvements
 
 Access control list (ACL)
 
@@ -201,7 +201,7 @@ Use Pinning service (Pinata, Web3.Storage)
 
 Replace private key login with MetaMask
 
-🎓 Research Context
+# 🎓 Research Context
 
 This project is developed for academic research in:
 
