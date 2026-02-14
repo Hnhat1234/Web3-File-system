@@ -157,20 +157,6 @@ ipfs cat <CID>
 
 This demonstrates distributed storage.
 
-# 📂 Project Structure
-/contracts
-  FileUploadSystem.sol
-
-/scripts
-  deploy.js
-
-/src
-  App.jsx
-  web3/
-    upload.js
-    read.js
-    delete.js
-
 # 🛠 Smart Contract Features
 
 Upload file metadata
