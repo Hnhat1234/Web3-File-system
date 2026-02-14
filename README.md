@@ -10,19 +10,19 @@ Traditional file systems rely on centralized servers.
 
 This application:
 
-Stores files on IPFS (InterPlanetary File System)
+- Stores files on IPFS (InterPlanetary File System)
 
-Stores file metadata (CID, owner) on Ethereum Smart Contract
+- Stores file metadata (CID, owner) on Ethereum Smart Contract
 
-Allows users to:
+- Allows users to:
 
-Upload files
+    - Upload files
 
-Read files
+    - Read files
 
-Delete file references
+    - Delete file references
 
-Supports multi-node IPFS demonstration in LAN environment
+- Supports multi-node IPFS demonstration in LAN environment
 
 🏗 Architecture
 
@@ -30,61 +30,79 @@ User → React Frontend → IPFS → Smart Contract → Hardhat Network
 
 Components
 
-Frontend: React + Ethers.js
+- Frontend: React + Ethers.js
 
-Blockchain: Hardhat local node
+- Blockchain: Hardhat local node
 
-Smart Contract: Solidity
+- Smart Contract: Solidity
 
-Storage: IPFS
+- Storage: IPFS
 
-Gateway Access: http://IP:8080/ipfs/CID
+- Gateway Access: http://IP:8080/ipfs/CID
 
 🔐 How It Works
 
-User logs in using private key
+1. User logs in using private key
 
-File is uploaded to IPFS
+2. File is uploaded to IPFS
 
-IPFS returns a CID
+3. IPFS returns a CID
 
-CID is stored on-chain
+4. CID is stored on-chain
 
-Other users can access file via:
+5. Other users can access file via:
 
-IPFS Gateway
+    - IPFS Gateway
 
-ipfs cat CID
+    - ipfs cat CID
 
 Ownership is managed by the smart contract.
 
 📦 Installation
+
 1️⃣ Clone repository
+
+``
 git clone <your-repo-url>
 cd <project-folder>
+``
 
 2️⃣ Install dependencies
+
+``
 npm install
+``
 
 3️⃣ Start Hardhat node
+
+``
 npx hardhat node --hostname 0.0.0.0
+``
 
 4️⃣ Deploy Smart Contract
-npx hardhat run scripts/deploy.js --network localhost
+
+``
+npx hardhat run scripts/deploy/deploy.js --network localhost
+``
 
 
 Copy deployed contract address to:
 
+``
 App.jsx
+``
 
 5️⃣ Start IPFS daemon
+
+``
 ipfs daemon
+``
 
 
 If running multi-node demo:
 
-ipfs config Addresses.API "/ip4/0.0.0.0/tcp/5001"
-ipfs config Addresses.Gateway "/ip4/0.0.0.0/tcp/8080"
+- ipfs config Addresses.API "/ip4/0.0.0.0/tcp/5001"
+- ipfs config Addresses.Gateway "/ip4/0.0.0.0/tcp/8080"
 
 
 Restart daemon after config.
@@ -93,12 +111,16 @@ Restart daemon after config.
 
 If using Vite:
 
+``
 npm run dev -- --host
+``
 
 
 If using CRA:
 
+``
 HOST=0.0.0.0 npm start
+``
 
 🌐 Accessing from Another Machine
 
@@ -108,17 +130,17 @@ Ensure IPFS Gateway runs on 0.0.0.0
 
 Open required firewall ports:
 
-8545 (RPC)
+- 8545 (RPC)
 
-5001 (IPFS API)
+- 5001 (IPFS API)
 
-8080 (IPFS Gateway)
+- 8080 (IPFS Gateway)
 
-3000 or 5173 (Frontend)
+- 3000 or 5173 (Frontend)
 
 Access via:
 
-http://SERVER_IP:3000
+- http://SERVER_IP:3000
 
 🧪 Demo: Multi-Node IPFS
 
